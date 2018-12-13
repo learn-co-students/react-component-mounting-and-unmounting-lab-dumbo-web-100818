@@ -1,6 +1,15 @@
 import React from "react";
 
 class Pancake extends React.Component {
+
+  componentWillUnmount() {
+    this.cleanUpInterval()
+  }
+
+  componentDidMount() {
+    this.startInterval()
+  }
+
   constructor(props) {
     super(props);
 
